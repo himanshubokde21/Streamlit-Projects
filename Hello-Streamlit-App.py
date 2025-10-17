@@ -12,4 +12,5 @@ if name and age and bio:
     st.write("👋 Hello, ", name)
     st.write("🌟 Age : ", age)
     st.write("🧠 Bio : ", bio)
+
     
