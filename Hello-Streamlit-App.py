@@ -1,10 +1,11 @@
 import streamlit as st
 
+st.success(f"Hello, ! 🎉 Welcome to Hello Streamlit.")
 st.title("👋 Hello Streamlit App")
 st.markdown("A <span style='color: lightblue; font-size: 19px; font-weight: bolder;'>Hello Streamlit</span> app that displays your name, age, and a short bio.", unsafe_allow_html=True)
 
 name = st.text_input("Name: ", placeholder="Enter your Name", help="you have to enter your 'name' here")
-age = st.number_input("Age: ", placeholder="Enter your Age", help="you have to enter your 'age' here")
+age = st.number_input("Age: ", placeholder="Enter your Age", help="you have to enter your 'age' here", min_value=0, max_value=100, step=1)
 bio = st.text_area("Bio: ", placeholder="Enter your Bio", help="you have to enter your 'bio' here")
 
 if name and age and bio:
@@ -12,5 +13,4 @@ if name and age and bio:
     st.write("👋 Hello, ", name)
     st.write("🌟 Age : ", age)
     st.write("🧠 Bio : ", bio)
-
     
